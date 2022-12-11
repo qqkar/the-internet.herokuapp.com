@@ -16,5 +16,6 @@ public class BasicAuthTest {
         driver.get("http://admin:admin@the-internet.herokuapp.com/basic_auth");
         WebElement text = driver.findElement(By.xpath("//p[contains(text(),'Congratulations! You must have the proper credentials.')]"));
         Assert.assertEquals(text.getText(), "Congratulations! You must have the proper credentials.");
+        driver.close();
     }
 }
